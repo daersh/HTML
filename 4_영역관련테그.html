@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            background: black;
+            width: 100px;
+            height: 100px;
+            margin: 0px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+        span{
+            border: 1px solid black;
+            background: black;
+            width: 100px;
+            height: 100px;
+            font-size: 20px;
+            color: aliceblue;
+            padding: 10px;
+            margin: 10px ;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        영역을 구분하는 테그
+        <div>: 줄바꿈이 적용되어 이미 존재하는 테그의 다음 줄에 영역이 설정됨(블럭 요소)
+        <span>: 줄바꿈이 적용되지 않아 옆으로 영역이 붙음(인라인 요소)
+        <p>: 문단 영역을 지정하는 테그(블럭 요소)
+        <pre>: 입력한대로 문단 영역을 지정하는 테그(블럭 요소)
+            블럭: 세로
+            인라인: 가로
+     -->
+    <h1>영역 관련 태그</h1>
+    <h3>div 테그</h3> 
+    <div style=" float: left;">첫번째 영역</div>
+    <div style="background: blue; float: left;">두번째 영역</div>
+    <div style="background: red;  float: left;">세번째 영역</div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+
+    <h3>span tag</h3>
+    <span>첫번째영역</span>
+    <span>두번째영역</span>
+    <span>세번째영역</span>
+    <span>4</span>
+</body>
+
+
+</html>

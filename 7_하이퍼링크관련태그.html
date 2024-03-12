@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <style>
+            img.img1{
+                width: 100px auto;
+                height: 100px;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+            <!-- 
+                링크 기능은 웹 문서가 다른 문서와 구분되는 가장 핵심 기능이다.
+                클릭을 통해 연결된 곳으로 이동하여 사용ㅇ을 편리하게 해주는 기능이다.
+                텍스트를 클릭해 링크를 이동하는 방법, 이미짖를 클랙해 링크를 이동하는 방법이 있으며
+                페이지 내에서의 링크를 통한 이동도 가능하다.
+             -->
+             <h1>하이퍼링크 관련테그</h1>
+             <h3>a 태그(anchor tag)를 이용한 하이퍼링크 테스트</h3> 
+             <ul>
+                <li><a href="1_글자관련테그.html">1번그</a></li>
+                <li><a href="2_목록관련테그.html">2번그</a></li>
+                <li><a href="3_표관련테그.html">3번그</a></li>
+                <li><a href="4_영역관련테그.html">4번그</a></li>
+                <li><a href="5_이미지관련테그.html">5번그</a></li>
+                <li><a href="6_미디어관련태그.html">6번테그</a></li>
+                <li><a href="7_하이퍼링크관련태그.html">7번테그</a></li>
+            </ul>
+            <!-- 
+                target="  "  
+                    1. _serf:  기존 탭에서 열기
+                    2. _blank: 새로운탭에서 열기
+            -->
+            <ul>
+                <li><a href="http://www.naver.com" target="_self">naver</a></li>
+                <li><a href="http://www.goolge.com" target="_blank">google</a></li>
+                <li><a href="http://www.daum.net" target="_blank">daum</a></li>
+            </ul>
+            <!-- img 테그를 통한 링크 -->
+            <a href="http://www.w3schools.com">
+                <img src="sample/image/flower5.PNG" width="150px" height="100px">
+            </a>
+            <!-- 한 페이지 내에서 점프하는 앵커 만들기 -->
+            <h3 id="menu">한 페이지 내에서 점프하는 앵커 만들기</h3>
+            <!-- 
+                                                                            html에서 '#'은 아이디를 가리키는 것을 의미한다.!!!!!!!!!!!!!!! 
+            -->
+            <ul>
+                <li><a href="#content1">content</a></li>
+                <li><a href="#content1">content</a></li>
+                <li><a href="#content1">content</a></li>
+            </ul>
+
+            <h4 id="content1">What is Lorem Ipsum?</h4>
+<pre>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release 
+    of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</pre>
+            <h4 id="content2">Where does it come from?</h4>
+<pre>
+    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard
+        McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going 
+        through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et 
+        Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line 
+        of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham
+                </pre>
+            <h4 id="content3">Why do we use it?
+            </h4>
+<pre>
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has 
+    a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and 
+    web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have 
+    evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+</pre>
+
+        <a href="#menu">돌아가기</a>
+    </body>
+</html>
