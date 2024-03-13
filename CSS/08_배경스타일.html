@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(34, 52, 37);
+        }
+        #div-bg{
+            width: 40%;
+            background: rgba(48, 74, 53, 0.636);
+        }
+        .div-test{
+            background-color: rgba(48, 74, 53, 0.636);;
+            padding: 20px ;
+            width: 20%;
+            border: 5px dashed rgb(31, 30, 30);
+            border-radius: 20px;
+            margin: 10px ;
+            float: left;
+            text-align: center;
+            color: gray;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: black 5px 5px 10px ;
+        }
+        #div1{
+            background-clip: border-box;
+        }
+        #div2{
+            background-clip: padding-box;
+        }
+        #div3{
+            background-clip: content-box;
+        }
+        .clearfloat{
+            clear: both;
+        }
+        #bg-img{
+            /* width: 70%; */
+            height: 1600px;
+            width: auto;
+            border: 4px solid rgb(3, 34, 3);
+            background-image: url('css/sample/image/river2.PNG');
+            background-repeat: no-repeat;   /*강추*/
+            background-size: cover;         
+            /* 이미지가 짤리지 않는(크롭 지 지않는)선에서 최대한 표시 */
+            background-size: contain;       /*강추*/
+            background-attachment: fixed;   /*강추*/
+
+
+            /* 2. 포지션 지정*/
+            background-size: auto;
+            background-position: 50%,50%;
+        }
+
+    </style>
+</head>
+    <body>
+        <h1>배경색 이미지</h1>
+        <h3>div 배경 테스트</h3>
+        <pre>div 영역을 설정하는 경우 배경색을 지정하기 위해 div 영역에 배경 색을 별도로 지정해야 한다.</pre>
+        <div id="div-bg">
+            sadfkja kfldsafsa jkadsad kjsadf kj dsf klj sdfajlkj dfsajkdsfa ks dfjdfsajk dsfjkldfs ajsadfkj kjlas 
+        </div>
+        <h3>배경 적용 범위 조정(feat. 엘리먼트의 구성 요소(padding, border, marign))</h3>
+        <pre>div 영역의 배경 적용 범위를 지정할 때 background-clip 속성을 사용한다,.</pre>
+        <div id="div1" class="div-test">
+            sadfkja kfldsafsa jkadsad kjsadf kj dsf klj sdfajlkj dfsajkdsfa ks dfjdfsajk dsfjkldfs ajsadfkj kjlas 
+        </div>
+        <div id="div2" class="div-test">
+            sadfkja kfldsafsa jkadsad kjsadf kj dsf klj sdfajlkj dfsajkdsfa ks dfjdfsajk dsfjkldfs ajsadfkj kjlas 
+        </div>
+        <div id="div3" class="div-test">
+            sadfkja kfldsafsa jkadsad kjsadf kj dsf klj sdfajlkj dfsajkdsfa ks dfjdfsajk dsfjkldfs ajsadfkj kjlas 
+        </div>
+        
+        <!-- float 끄고 아랫줄로 이동시키기 위함-->
+        <!-- <br clear="both"> 이 방식보다 아래처럼 할 것을 권장-->
+        <!-- float를 통해 블럭요소를 인라인 요소처럼 배치하였을 때 이후 다시 원상복귀르 ㄹ 위해서는 clear 개념이 요요하다.
+            태그의 attribute(clear="both")로 적용 할 수 도 있지만 css로 만들어 class 명을 통해 clear 시키는 것을 권장한다.
+        -->
+        <p class="clearfloat">asdfaf</p>
+
+        sout
+        
+        <h3>배경 이미지 테스트</h3>
+        <pre>background-image 속성을 사용하여 배경 이미지를 지정할 수 있다. 사진의 크기에 따라 이미지 사이즈를 고민해야 한다.</pre>
+        <!-- div#bg-img -->
+        <div id="bg-img"></div>
+
+        
+   </body>
+</html>
