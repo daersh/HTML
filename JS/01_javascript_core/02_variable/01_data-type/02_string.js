@@ -18,8 +18,9 @@ console.log('multiline: ',str2);
 var lastName = "홍";
 var firstName = "길동";
 console.log('my name is '+firstName +lastName + '!');
-// 표현식 삽입*(${})과 함께 사용하면 문자열 연산보다 가독성 좋고 간편하게 문자열을 조합할 수 있다.
+// 표현식 삽입*(${})과 함께 사용하면 문자열 연산보다 가독성 좋고 간편하게 문자열을 조합할 수 있다. 무조건 백키(₩) 사용
 console.log(`my name is ${firstName} ${lastName}!`);
+console.log(`my name is ${firstName} ${lastName}!${1+2}`);
 
 
 /**
