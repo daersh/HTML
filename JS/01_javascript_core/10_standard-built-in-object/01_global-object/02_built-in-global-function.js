@@ -22,4 +22,3 @@ console.log(encComp);
 /* 나중에 백단에서 url값으로 넘어오는 한글이 깨지면 사용하게 될 함수 */
 const decComp = decodeURIComponent(encComp);
 console.log(decComp);
-
