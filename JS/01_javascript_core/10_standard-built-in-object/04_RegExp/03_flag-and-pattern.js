@@ -44,7 +44,7 @@ console.log(target.match(/se?oul/g));   // e가 있거나 없어도 되며 soul,
 console.log('-------------------');
 
 /* |: or */
-target = 'aa bb cc dd 123 456 _@';
+target = 'aa aaa bb cc dd 123 456 _@';
 console.log(target.match(/a|b/g));      // 'a'또는 'b' 모두
 
 /* 분해되지 않는 단어 레벨로 검색하기 위해 + 함께 사용 */
