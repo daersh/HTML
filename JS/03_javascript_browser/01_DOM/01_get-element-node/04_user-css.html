@@ -1,0 +1,38 @@
+<!-- 04_user-css.html -->
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. use-class</title>
+    <style>
+        .area{
+            width: 100px; 
+            height: 100px;
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>04_ css 선택자를 이용한 요소 노드 취득</h1>
+    <div class="area">
+        <p>first</p>
+    </div>
+    <div class="area">
+        <p>second</p>
+    </div>
+
+    <script>
+        // querySelector 또는 querySelectorAll 을 사용하면 css에서 쓰던 선택자를 그대로 활용할 수 있다.!!!!!!!!
+
+        // const $area = document.querySelector('.area');   //첫번 째 요소 하나만 선택
+        const $area = document.querySelectorAll('.area');       // 선택자에 해당하는 모든 요소들을 NodeList(유사배열) 타입으로 반환
+        console.log($area);     //이도 유사 배열임 확인 가능 하지만 foreach 사용 가능하다~!
+
+        const $firstP = document.querySelector('p');
+        $firstP.style['background-color'] = 'green';
+        
+    </script>
+</body>
+</html>
+
