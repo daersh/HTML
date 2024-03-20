@@ -49,11 +49,11 @@ console.log(`idol3 기준으로 idol1, idol2를 concat: ${idol3.concat(idol1, id
 //slice()  배열의 요소 선택 복사
 //splice()  배열의 index 위치의 요소 제거 및 추가
 const front = ['Html','CSS','JavaScript','Vue'];        //css javascript
-console.log(front.slice(1,3));                          //원본 그대로 출력
+console.log(front.slice(1,3));                          
 
 // splice(인덱스, 제거할 길이, 추가할값1, 추가할값2, ....) ;
 console.log(front.splice(1,3,'HTML','CSS','JavaScript','Vue'));
-console.log(front);
+console.log(front);                                     //원본 그대로 출력
 
 // join: 배열을 우리가 원하는 구분자와 함께 결합하여 문자열로 반환
 const snackList= ['candy','cake','bread','cookie'];
