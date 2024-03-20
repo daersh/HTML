@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>03. addEventListener 메서드</h1>
+    <p>
+        요소 노드에서 제공하는 addEventListener 메서드를 활용하는 방식이다.
+    </p>
+    <button id="btn">클릭 해보시오</button>
+    <script>
+        const $button = document.getElementById("btn");
+        // 중요!
+        // 이벤트리스너는 중복 선언해서 사용할 수 있다.
+        $button.addEventListener("click", function(){
+            alert('클릭 했네?');
+        });
+        $button.addEventListener("click", function(){
+            console.log('addEventListener 메서드 방식으로 이벤트 핸들러 등록!');
+        });
+        $button.addEventListener("click", ()=>console.log('화살표 함수 사용해도 된다~~') );
+
+    </script>
+    
+</body>
+</html>
