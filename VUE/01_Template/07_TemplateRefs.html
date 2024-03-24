@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="step01">
+        <label> name: </label> <input type="text" ref="namebox" v-model="name">
+        <br>
+        <label> 입력 한 이름: {{name}}</label>
+    </div>
+
+    <script>
+        const {createApp, ref}=Vue;
+        createApp({
+            setup(){
+                const name = ref('');
+                return{
+                    name
+                }
+            }, mounted(){
+
+                console.log(this.$refs.namebox);
+                console.log(this.$refs.namebox.focus());
+            }
+        }).mount('#step01')
+
+
+    </script>
+</body>
+</html>
