@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="step01">
+        <p>
+            {{num}}
+        </p>
+        <button @click="num++">num++</button>
+    </div>
+    <div id="step02">
+        <p>
+            {{num}}
+        </p>
+        <button @click="num++">num++</button>
+    </div>
+
+
+    <script>
+        const {createApp,ref,watch} = Vue;
+        /*
+            immediate란
+            watch는 트리거를 설정한 반응형 변수의 상태가 변하면 호출되는 메서드이다. 하지만 경우에 따라 바로 반응형 변수의 상태가 변하기도 전에 호출되어야 하는 경우가 있는데
+            이 경우에는 immediate option을 통해 dom이 로드 되면서 watch를 먼저 실행하게 된다. (create 시점)
+            
+            once란
+            트리거를 설정한 반응성 변수의 상태가 변하면 단 한번만 콜백 함수가 호출되도록 하는 옵션이다.
+        */
+        createApp({
+            setup(){
+                const num = ref(0);
+                watch(num,(newValue,oldValue) => {
+                    console.log('new: ',newValue);
+                    console.log('old: ',oldValue);
+                }
+                , {immediate: true}     // 버튼 안눌었음에도 처음에 한번 실행시켜줌
+                );
+
+                return{
+                    num
+                }
+            }
+        }).mount('#step01');
+        
+        createApp({
+            setup(){
+                const num = ref(0);
+                watch(num,(newValue,oldValue) => {
+                    console.log('new: ',newValue);
+                    console.log('old: ',oldValue);
+                }
+                , {once: true}     // 딱 한번만 watch하고 그 이후로는 검사 안하게됨
+                );
+                return{
+                    num
+                }
+            }
+        }).mount('#step02');
+
+    </script>
+</body>
+</html>
