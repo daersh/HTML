@@ -1,7 +1,10 @@
 <template>
     <div>
-        <h1>Path</h1>
-        <h2>{{ currentRoute.params.id }}</h2>
+        <h1>querystring</h1>
+
+        <h2>{{ currentRoute.query }}</h2>
+        <h2>{{ currentRoute.query.name }}</h2>
+        <h2>{{ currentRoute.query.age }}</h2>
     </div>
 </template>
 
